@@ -17,13 +17,16 @@ body{
   justify-content: center;
 }
 
-#app{
-  padding: 20px;
+#student-container{
+  display:flex;
+  padding: 50px;
+  
 }
 
 .container{
-  width: 45%;
-  float: left;
-  padding: 20px;
-  border: 2px solid grey;
+  flex: 1;
+  border: 2px grey solid;
 }
+
+
+  
