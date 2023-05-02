@@ -59,11 +59,12 @@ const cardsOnDom = (array) => {
     <div class="card-body">
       <h5 class="card-title">${student.name}</h5>
       <p class="card-text">${student.house}</p>
-      <a href="#" class="btn btn-primary"> Expel </a>
+      <a href="#" id="expelButton--${student.id}" class="btn btn-primary"> Expel </a>
     </div>
   </div>` 
   }
   renderToDom("#student-display", domString);
+  document.querySelector("#student-display").addEventListener("click", expelStudent);
 }
 
 const showAllButton = document.querySelector("#all-button");
@@ -71,6 +72,8 @@ showAllButton.addEventListener('click', () => {
   cardsOnDom(students);
 })
 
+//empty array for expelled students
+const expelledStudents = [];
 
 //Rendering army cards on the dom
 
@@ -158,8 +161,9 @@ showPuffButton.addEventListener('click', () =>{
   const  puffStudent = puffFilter (students, "huffle puff");
   cardsOnDom(puffStudent);
 })
-//Create Form and Button
 
+
+//Create Form and Button
 const form = document.querySelector ('form');
 
 const createStudent = (e) => {
@@ -176,6 +180,21 @@ const createStudent = (e) => {
 }
 form.addEventListener('submit', createStudent);
 
+//Expel Button
+
+const expelStudent = (e) => {
+  if (e.target.id.includes("expelButton")){
+    const [,studentId] = e.target.id.split("--");
+    const studentIndex = students.findIndex(
+      (student) => Number(studentId)=== student.id
+    );
+    const expelledStudent = students.splice (studentIndex,1);
+    expelledStudents.push(expelledStudent);
+
+    armyOnDom(expelledStudent);
+    cardsOnDom(students);
+  }
+}
 
 
 //Modal Functionality
