@@ -169,9 +169,14 @@ const form = document.querySelector ('form');
 const createStudent = (e) => {
   e.preventDefault();
 
+  const randNum = Math.floor(Math.random() * 4);
+  const randomStudent = students[randNum];
+
   const newStudentObj = {
     id: students.length +1,
-    name: document.querySelector("#name").value
+    image: document.querySelector("#image").value,
+    name: document.querySelector("#name").value,
+    house: randomStudent.house
   }
 
   students.push(newStudentObj);
