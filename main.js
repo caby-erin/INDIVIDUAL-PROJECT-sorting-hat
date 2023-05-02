@@ -92,13 +92,6 @@ showAllArmy.addEventListener('click', () => {
   armyOnDom(deathEater);
 })
 
-//Modal Functionality
-const myModal = document.getElementById('exampleModal')
-const myInput = document.getElementById('myInput')
-
-myModal.addEventListener('shown.bs.modal', () => {
-  myInput.focus()
-})
 
 //Filter House Buttons
 
@@ -169,4 +162,26 @@ showPuffButton.addEventListener('click', () =>{
 
 const form = document.querySelector ('form');
 
-con
+const createStudent = (e) => {
+  e.preventDefault();
+
+  const newStudentObj = {
+    id: students.length +1,
+    name: document.querySelector("#name").value
+  }
+
+  students.push(newStudentObj);
+  cardsOnDom(students);
+  form.reset()
+}
+form.addEventListener('submit', createStudent);
+
+
+
+//Modal Functionality
+const myModal = document.getElementById('myModal')
+const myInput = document.getElementById('myInput')
+
+myModal.addEventListener('shown.bs.modal', () => {
+  myInput.focus()
+})
