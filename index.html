@@ -23,6 +23,7 @@
   </div>
 
 
+
   <!-- sorting hat card -->
   <div class="sorting-hat-card">
   <div class="card" style="width: 18rem;">
@@ -30,10 +31,48 @@
     <div class="card-body">
       <h5 class="card-title">Hello, I am the Sorting Hat!</h5>
       <p class="card-text">Click the button below to find your house.</p>
-      <a href="#" class="btn btn-primary">House Selector</a>
+      <!--<a href="#" class="btn btn-primary">House Selector</a> -->
     </div>
   </div>
 </div>
+
+
+
+
+<!-- Modal -->
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Find Your House!
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        
+        <form>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="name" placeholder="Name" required>
+            <label for="floatingInput"> Name</label>
+          </div>
+          <button type="submit" class="btn btn-success" id="form-submit">Sort Me</button>
+        
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+        
+      
 
 
 <!--Section where Hogwarts Students will display-->
@@ -46,8 +85,6 @@
   <div class="text-header">Voldemort's Army</div>
     <div class="container" id="army-display"></div>
 </div>
-
-
 
 
 
