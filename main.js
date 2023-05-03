@@ -163,13 +163,13 @@ showPuffButton.addEventListener('click', () =>{
 })
 
 
-//Create Form and Button
+//Create Form and Button and Randomizer
 const form = document.querySelector ('form');
 
 const createStudent = (e) => {
   e.preventDefault();
 
-  const randNum = Math.floor(Math.random() * 4);
+  const randNum = Math.floor(Math.random() * 5);
   const randomStudent = students[randNum];
 
   const newStudentObj = {
@@ -196,10 +196,14 @@ const expelStudent = (e) => {
     const expelledStudent = students.splice (studentIndex,1);
     expelledStudents.push(expelledStudent);
 
+    armyOnDom(deathEater);
     armyOnDom(expelledStudent);
     cardsOnDom(students);
+    
   }
 }
+
+
 
 
 //Modal Functionality
