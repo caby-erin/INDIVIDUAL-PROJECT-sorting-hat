@@ -1,5 +1,5 @@
 body{
-  background-color: white;
+  background-image: url(background.jpeg);
 }
 
 #filter-buttons{
@@ -17,16 +17,30 @@ body{
   justify-content: center;
 }
 
-#student-container{
+/*#student-container{
   display:flex;
   padding: 50px;
   
 }
-
 .container{
   flex: 1;
   border: 2px grey solid;
 }
+*/
 
+.container{
+  display:flex;
+}
 
-  
+.text-header{
+  text-align: center;
+  background-color: white;
+  margin: 10px;
+}
+
+.btn-primary{
+  background-color: black;
+  border: black 3px dotted;
+  margin-left: 45%;
+  margin-right: auto;
+}
