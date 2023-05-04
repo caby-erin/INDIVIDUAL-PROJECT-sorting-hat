@@ -5,12 +5,12 @@ const students = [
     house: "gryffindor",
     image: "https://assets.vogue.in/photos/5f23c04f1d33754d11eaf778/2:3/w_2560%2Cc_limit/harry-potter-philosophers-stone-portrait-8.jpg"
   },
-  /*{
+  {
     id:2,
-    name: "Hermoine",
+    name: "Hermoine Granger",
     house: "gryffindor",
-    image: "https://i.insider.com/60772a1742061500181757bc?width=700"
-  },*/
+    image: "https://www.themarysue.com/wp-content/uploads/2015/09/Hermione-2.jpg"
+  },
   {
     id: 3,
     name: "Luna Lovegood",
@@ -168,7 +168,7 @@ const form = document.querySelector ('form');
 const createStudent = (e) => {
   e.preventDefault();
 
-  const randNum = Math.floor(Math.random() * 4);
+  const randNum = Math.ceil(Math.random() * 4);
   const randomStudent = students[randNum];
   console.log(randNum);
 
@@ -187,11 +187,6 @@ form.addEventListener('submit', createStudent);
 
 //Expel Button
 
-//empty array for expelled students
-//const expelledStudents = [];
-
-
-
 const expelStudent = (e) => {
   if (e.target.id.includes("expelButton")){
     const [,studentId] = e.target.id.split("--");
@@ -200,7 +195,7 @@ const expelStudent = (e) => {
     );
     
 
-     
+      
 
     const expelledStudent = students.splice (studentIndex,1);
     deathEater.push(...expelledStudent);
@@ -208,7 +203,7 @@ const expelStudent = (e) => {
     //armyOnDom(expelledStudent);
     armyOnDom(deathEater);
     cardsOnDom(students);
-    
+    console.log(studentIndex);
   }
 }
 
