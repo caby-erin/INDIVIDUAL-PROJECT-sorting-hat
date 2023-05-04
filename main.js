@@ -72,8 +72,7 @@ showAllButton.addEventListener('click', () => {
   cardsOnDom(students);
 })
 
-//empty array for expelled students
-const expelledStudents = [];
+
 
 //Rendering army cards on the dom
 
@@ -187,6 +186,9 @@ form.addEventListener('submit', createStudent);
 
 //Expel Button
 
+//empty array for expelled students
+//const expelledStudents = [];
+
 const expelStudent = (e) => {
   if (e.target.id.includes("expelButton")){
     const [,studentId] = e.target.id.split("--");
@@ -194,10 +196,10 @@ const expelStudent = (e) => {
       (student) => Number(studentId)=== student.id
     );
     const expelledStudent = students.splice (studentIndex,1);
-    expelledStudents.push(expelledStudent);
+    deathEater.push(expelledStudent);
 
-    armyOnDom(deathEater);
     armyOnDom(expelledStudent);
+    armyOnDom(deathEater);
     cardsOnDom(students);
     
   }
