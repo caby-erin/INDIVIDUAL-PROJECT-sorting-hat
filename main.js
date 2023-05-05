@@ -79,7 +79,7 @@ showAllButton.addEventListener('click', () => {
 const armyOnDom = (array) => {
   let domString = "";
   for (const expelled of array) {
-    domString += `<div class="card" style="width: 18rem;">
+    domString += `<div class="card" id="voldy-card" style="width: 18rem;">
     <img src="${expelled.image}" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">${expelled.name}</h5>
@@ -213,11 +213,6 @@ const expelStudent = (e) => {
 
 
 
-
-
-
-
-
 //for each functions 
 students.forEach(function(itemInfo){
   console.log(itemInfo);
@@ -226,6 +221,7 @@ students.forEach(function(itemInfo){
 deathEater.forEach(function(itemInfo){
   console.log(itemInfo);
 })
+
 
 
 //Modal Functionality

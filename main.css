@@ -44,3 +44,17 @@ body{
   margin-left: 45%;
   margin-right: auto;
 }
+
+#voldy-card{
+  background-color: black;
+  color: white;
+  border: red solid 7px;
+  
+}
+
+.card-img-top{
+  max-width: auto;
+  max-height: 200px;
+  object-fit: contain;
+  
+}
