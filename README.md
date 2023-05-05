@@ -55,3 +55,41 @@ Think of a way you can expel students without just hiding those divs on the page
 - House Colors: The color of the student's card changes depending on which house they were sorted.
 - Card Sorting/Ordering: Sort the student cards by some criteria (i.e. alphabetically by name, by house)
 
+
+
+
+My Notes
+## Name of the Project: 
+Sorting Hat
+
+## Overview of the project: 
+Create a student that is sorted into a random house, filter students by house, and expel students to the dark side.
+
+## Link to your wireframes/prototype: 
+I just drew on a sheet of paper 
+
+## Link/screenshot of data flowchartL 
+Also drew this on a sheet of paper lol
+
+## Link to the deployed project (will learn later)
+https://erins-sorting-hat.netlify.app/
+
+## Link to your project board (yes...even though it is a part of the repo) 
+Not sure what to link here?
+
+## Description of the user and the problem you are solving for them: 
+User wants to know what house they would be sorted into - we solve that problem! User also wants to be able to banish students to Voldemort's army. 
+
+## List of features - 
+add students, filter students, expel students
+
+## Screenshots of your project  - 
+project-image.png in files
+
+
+## List of contributors and links to their GH profiles - 
+did not reference GH but referenced code sandbox: https://codesandbox.io/s/functions-and-events-forked-enrhjf?file=/index.js 
+
+
+## Link to Loom video walkthrough of your app (no more than 1 minute long! Make it great)
+https://www.loom.com/share/718499c93e734d5588f17ecac032391b
